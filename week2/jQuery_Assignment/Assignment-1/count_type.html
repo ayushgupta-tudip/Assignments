@@ -1,0 +1,31 @@
+<html>
+ <head>
+ <style>
+	.div1{
+		display : inline;
+	}
+	
+ </style>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script>
+    $(document).ready(function()
+    {
+        $('textarea#type').keyup(function()
+        {
+            $('input#count').val(this.value.length)      
+        });
+    });
+    </script>
+ </head>
+ <body>
+ <h3>When key is pressed then in 2nd text filed its shows the count of total hits of key press.</h3>
+<div class="div1">
+<span>
+ Press any keys : <textarea id="type"></textarea>
+ </span>
+ <span>
+ Number of key pressed : <input size="2" type="text" id="count" />
+</span>
+ </div>
+ </body>
+</html>
