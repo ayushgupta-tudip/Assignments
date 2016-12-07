@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.center{
+			float: center;
+		}
+	</style>
+	
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+		var count1 = (function () {
+			var counter = 0;
+			return function () {return counter += 1;}
+		})();
+
+		function likeFunction(){
+			document.getElementById("likeme").innerHTML = count1();
+		}
+		
+		var count2 = (function () {
+			var counter = 0;
+			return function () {return counter += 1;}
+		})();
+
+		function dislikeFunction(){
+			document.getElementById("dislikeme").innerHTML = count2();
+		}
+	</script>
+</head>
+<body>
+
+	<div class="center">
+
+		<h2>If you like the image click on LIke, if not click on Dislike...</h2>
+		<img src="captain.png" height="200" width="150"><br>
+		<div>
+		<span><p id="likeme"></p><img src="like.jpeg" height="30" width="70" id="img2" onclick="likeFunction()"></span>
+		<span><p id="dislikeme"></p><img src="dislike.jpg" height="30" width="70" id="img3" onclick="dislikeFunction()"></span>
+		</div>
+	</div>
+
+</body>
+</html>
